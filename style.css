@@ -1,0 +1,31 @@
+.logo {
+	z-index: 3;
+}
+.header-nav {
+	position: absolute;
+}
+.menu {
+	background-image: url("image/bg_menu.png");
+	height: 229px;
+	z-index: 2;
+}
+.nav_menu {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	padding-top: 25px;
+	z-index: 3;
+
+}
+.nav-menu_item {
+	font-family: 'Poppins', sans-serif;
+	padding-left: 37px;
+	padding-right: 737px;
+	color: white;
+
+}
+#carouselExampleCaptions {
+	margin-top: -229px;
+	z-index: -2;
+}
