@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-     var $container = $(".masonry-container");
-  $container.imagesLoaded(function () {
-    $container.masonry({
-      columnWidth: ".item",
-      itemSelector: ".item"
-    });
-  });
-  $('.item').imagefill();
 
     $('.section-hero__slider').slick({
             dots: true,
@@ -31,37 +23,61 @@ $(document).ready(function(){
         $('.section-hero__slider').slick("slickPrev");
     });
 
-/*//masonry
-    $('.grid').masonry({
-      itemSelector: '.grid-item',
-      columnWidth: 364
+    $('.section-client-say__slider-items').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        appendDots:$('.section-client-say__dots'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+           ]
     });
-});*/
+    $('#section-slider__next').click(function() {
+        $('.section-client-say__slider-items').slick("slickNext");
+    });
 
-/*$(document).load(function() {
-  var $container = $(".masonry-container");
+    $('#section-slider__prev').click(function() {
+        $('.section-client-say__slider-items').slick("slickPrev");
+    });
+
+    var $container = $(".masonry-container");
   $container.imagesLoaded(function () {
     $container.masonry({
-      columnWidth: ".grid-sizer",
+      columnWidth: ".item",
       itemSelector: ".item"
     });
-  });*/
+  });
+  $('.item').imagefill();
 });
 
 
-/*$('.carousel').carousel({
-  interval: 1000,
-  keyboard: true,
-  ride: false,
-  wrap: true,
-})
+ 
 
-
-$('.grid').masonry({
-  itemSelector: '.grid-item',
-  columnWidth: 364
-});
-
+/*
 function cargarmapa() {
   var punto = new google.maps.LatLng(
     41.129220338983,
@@ -75,4 +91,5 @@ function cargarmapa() {
   var m=new google.maps.Map(document.getElementById("mapa"),
     opciones);
 }*/
+
 
