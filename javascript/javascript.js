@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     $('.section-hero__slider').slick({
             dots: true,
             infinite: true,
@@ -29,6 +28,7 @@ $(document).ready(function(){
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
+        arrows: false,
         appendDots:$('.section-client-say__dots'),
         responsive: [
             {
@@ -56,11 +56,11 @@ $(document).ready(function(){
             }
            ]
     });
-    $('#section-slider__next').click(function() {
+    $('.section-client-say__slider__btn-next').click(function() {
         $('.section-client-say__slider-items').slick("slickNext");
     });
 
-    $('#section-slider__prev').click(function() {
+    $('.section-client-say__slider__btn-prev').click(function() {
         $('.section-client-say__slider-items').slick("slickPrev");
     });
 
@@ -72,24 +72,12 @@ $(document).ready(function(){
     });
   });
   $('.item').imagefill();
+
+   var mydata = JSON.stringify(data);
+console.log(mydata);
+
+
 });
 
-
- 
-
-/*
-function cargarmapa() {
-  var punto = new google.maps.LatLng(
-    41.129220338983,
-    -3.23365432098762
-    );
-  var opciones = {
-    zoom: 6,
-    center: punto,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var m=new google.maps.Map(document.getElementById("mapa"),
-    opciones);
-}*/
-
+//var newData = JSON.stringify(userData)
 
